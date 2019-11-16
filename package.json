@@ -8,6 +8,7 @@
   "jsnext:main": "dist/honeycomb.esm.min.js",
   "types": "dist/honeycomb.d.ts",
   "scripts": {
+    "postinstall": "npm run build",
     "build": "npm run clean && npm run copy-types && rollup --config rollup.config.js",
     "clean": "rm -rf dist && mkdir dist",
     "copy-types": "cp src/honeycomb.d.ts dist/",
